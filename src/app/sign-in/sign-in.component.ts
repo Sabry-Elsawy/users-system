@@ -11,9 +11,9 @@ import { Router } from '@angular/router';
 export class SignInComponent {
   constructor(private _AuthService: AuthService, private _Router: Router) {}
 
-  errorMessage: string = '';
-  isLoading: boolean = false;
-  isShow: boolean = false;
+  errorMessage = '';
+  isLoading = false;
+  isShow = false;
 
   singinForm = new FormGroup({
     username: new FormControl(null),

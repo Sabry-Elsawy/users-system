@@ -9,7 +9,7 @@ import { SidebarService } from '../services/sidebar.service';
 export class HeaderComponent {
  constructor(private _SidebarService:SidebarService){}
 
- isOpen:boolean=true;
+ isOpen=true;
 
  toggleSidebar() {
   this._SidebarService.toggleSidebar();

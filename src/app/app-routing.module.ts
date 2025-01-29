@@ -5,7 +5,7 @@ import { UsersComponent } from './users/users.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 import { AddUserComponent } from './add-user/add-user.component';
-import { EditUserComponent } from './edit-user/edit-user.component';
+//import { EditUserComponent } from './edit-user/edit-user.component';
 import { ProfileComponent } from './profile/profile.component';
 import { authGuard } from './guards/auth.guard';
  

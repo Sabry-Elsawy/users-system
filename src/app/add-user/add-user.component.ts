@@ -13,7 +13,9 @@ import { Users } from '../inerface/users';
 })
 export class AddUserComponent implements OnInit {
   selectedDate:Date | null =null;
+ 
   userId:number=0;
+ 
   userInfo:Users|undefined;
  
 constructor(private _AddUserService:AddUserService , private _ActivatedRoute:ActivatedRoute , private _EditUserService:EditUserService){}
