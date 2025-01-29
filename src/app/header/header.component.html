@@ -1,0 +1,16 @@
+<div class="header">
+    <div (click)="toggleSidebar()" class="icon">
+       
+            <i     class="fa-solid  " [class]="isOpen?'fa-caret-left':'fa-caret-right'"></i>
+          
+    </div>
+   
+        <div class="search d-flex align-items-center">
+       <div class="position-relative ">
+        <input  type="search" placeholder="Search..">
+        <i class="fa-solid fa-magnifying-glass"></i>
+       </div>
+       
+        <i class="mx-5 fa-regular fa-bell"></i>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+ <div class="row g-0">
+    <div class="col-2 "  *ngIf="isSidebarOpen"  >
+  
+            <app-sidebar   ></app-sidebar>
+      
+    </div>
+    <div  [class.col-10]="isSidebarOpen" [class.col-12]="!isSidebarOpen">
+        <router-outlet></router-outlet>
+    </div>
+ </div>

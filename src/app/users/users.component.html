@@ -1,0 +1,39 @@
+ 
+ <section>
+    <app-header></app-header>
+    <div class="users py-4 ">
+        <div class="head d-flex justify-content-between align-items-center ">
+            <h1>Users List</h1>
+            <button   routerLink="/home/adduser">ADD NEW User</button>
+        </div>
+        <hr>
+
+        <table class="table ">
+            <thead  >
+                <th>Profile</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date of admission</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of usersList">
+                    <td><img [src]="user.image" class="w-25" alt=""></td>
+                    <td>{{user.firstName}} {{user.lastName}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.birthDate}}</td>
+                    <td>
+                        <i class="fa-solid fa-pen mx-2"></i>
+                        <i class="fa-solid fa-trash mx-2"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+      
+     </div>
+ </section>
