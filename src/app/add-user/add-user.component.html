@@ -1,0 +1,87 @@
+<app-header></app-header>
+
+
+<div class="add-user">
+    <div class="head">
+        <h1> {{userId?'update':'Add'}} User</h1>
+    </div>
+
+
+ <div class="form-container">
+ 
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)"  >
+        <div class="row gy-2">
+            <div  class="col-md-6  ">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input formControlName="firstName" matInput placeholder="Enter your First Name">
+                  </mat-form-field>
+                  <div class="errors" *ngIf="userForm.get('firstName')?.errors && userForm.get('firstName')?.touched" >
+                    <p *ngIf="userForm.get('firstName')?.errors?.['required']">First name is required</p>
+                    <p *ngIf="userForm.get('firstName')?.errors?.['minlength']">First name min 3 char</p>
+                    <p *ngIf="userForm.get('firstName')?.errors?.['maxlength']">First name max 10 char</p>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input formControlName="lastName" matInput placeholder="Enter your Last Name">
+                  </mat-form-field>
+                  <div class="errors" *ngIf="userForm.get('lastName')?.errors && userForm.get('lastName')?.touched" >
+                    <p *ngIf="userForm.get('lastName')?.errors?.['required']">Last name is required</p>
+                    <p *ngIf="userForm.get('lastName')?.errors?.['minlength']">Last name min 3 char</p>
+                    <p *ngIf="userForm.get('lastName')?.errors?.['maxlength']">Last name max 10 char</p>
+                  </div>
+            </div>
+
+            <div  class="col-md-6  ">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" type="email" matInput placeholder="Enter your Email">
+                  </mat-form-field>
+                  <div class="errors" *ngIf="userForm.get('email')?.errors && userForm.get('email')?.touched" >
+                    <p *ngIf="userForm.get('email')?.errors?.['required']">Email is required</p>
+                    <p *ngIf="userForm.get('email')?.errors?.['email']">Email not valid</p>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Age</mat-label>
+                    <input formControlName="age" matInput placeholder="Enter your Age">
+                  </mat-form-field>
+                  <div class="errors" *ngIf="userForm.get('age')?.errors && userForm.get('age')?.touched" >
+                    <p *ngIf="userForm.get('age')?.errors?.['min']">age must be greater than 16</p>
+                    <p *ngIf="userForm.get('age')?.errors?.['max']">age must be less than 60</p>
+                  </div>
+            </div>
+
+            <div  class="col-md-6  ">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <input formControlName="phone" type="tel" matInput placeholder="Enter your Phone Number">
+                  </mat-form-field>
+                  <div class="errors" *ngIf="userForm.get('phone')?.errors && userForm.get('phone')?.touched" >
+                    <p *ngIf="userForm.get('phone')?.errors?.['pattern']">Phone must be Egypt number format</p>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>birth Date</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate" formControlName="birthDate" [valueAsDate]="selectedDate" type="date" matInput placeholder="Enter your birth Date">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  
+                  </mat-form-field>
+                 
+            </div>
+         
+        </div>
+
+        <div class="form-btn">
+            <button [disabled]="!userForm.valid" class="btn" type="submit">Save</button>
+        </div>
+    </form>
+ 
+ </div>
+
+</div>

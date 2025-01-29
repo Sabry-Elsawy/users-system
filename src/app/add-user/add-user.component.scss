@@ -1,0 +1,62 @@
+.add-user{
+    padding: 15px 20px;
+    background-color: #acacac36;
+   // min-height: 100vh;
+}
+.head h1{
+    font-family: Montserrat;
+font-size: 22px;
+font-weight: 700;
+line-height: 26.82px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+ 
+}
+
+ .form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+ }
+form {
+    width: 80%;             
+    max-width: 1008px;  
+    background-color: #fff;  
+    border-radius: 20px;  
+    padding: 80px 40px;  
+}
+
+// background input
+//  .main-color{
+//     background-color: #acacac36;
+//     height: 100%;
+// }
+
+.form-btn{
+    display: flex;
+    justify-content: center;
+}
+.form-btn button{
+    background-color: #FEAF00;
+    border-radius: 4px;
+    width: 415px;
+    height: 44px;
+    font-family: Montserrat;
+font-size: 20px;
+font-weight: 500;
+line-height: 17.07px;
+ 
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #fff;
+border: none;
+margin-top: 10px;
+
+
+}
+.errors p{
+    color: red;
+    margin: -15px 0 0 0;
+}

@@ -1,0 +1,35 @@
+<section> 
+    <div class="container">
+   <div class="row ">
+    <div class="col-lg-4  mx-auto">
+    
+                <div class="login  ">
+                  <div class="login-head ">
+                    <h1>User Management System</h1>
+                    <h6>Sign In</h6>
+                    <p>Enter your credentials to access your account</p>
+                  </div>
+
+                  <form [formGroup]="singinForm"  (ngSubmit)="onlogin(singinForm)" form class="text-center mx-3"> 
+                    
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input formControlName="username"   matInput placeholder="Enter your name">
+                  </mat-form-field>
+
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input class="pass"   formControlName="password"  [type]="isShow? 'text':'password'" matInput placeholder="Enter your password">
+                    <i (click)="isShow = !isShow" class="icon-eye fa-solid " [class]="isShow? 'fa-eye':' fa-eye-slash'"></i>
+                  </mat-form-field>
+                  <button   type="submit"> 
+                    <span  *ngIf="!isLoading" >SIGN IN</span>
+                    <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+                  </button>
+                  </form>
+                </div>
+      
+    </div>
+   </div>
+</div>
+</section>
