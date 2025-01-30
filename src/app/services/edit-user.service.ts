@@ -11,10 +11,10 @@ export class EditUserService {
   constructor(private _HttpClient:HttpClient) { }
 
   getUserById(id:number):Observable<any>{
-    return this._HttpClient.get(`https://dummyjson.com/users/${id}`)
+    return this._HttpClient.get(`users/${id}`)
   }
 
   editOnUser(id:number,data:FormGroup):Observable<any>{
-    return this._HttpClient.put(`https://dummyjson.com/users/${id}`,data)
+    return this._HttpClient.put(`users/${id}`,data)
   }
 }

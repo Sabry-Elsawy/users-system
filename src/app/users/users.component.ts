@@ -46,6 +46,7 @@ deleteUser(id:number){
     },
     complete:()=>{
       console.log("ok");
+      this.getAllUsers();
     }
   })
 }

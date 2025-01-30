@@ -9,9 +9,9 @@ export class UsersService {
 
   constructor(private _HttpClient:HttpClient) { }
   getAllusers():Observable<any>{
-    return this._HttpClient.get('https://dummyjson.com/users')
+    return this._HttpClient.get('users')
   }
   deleteUser(id:number):Observable<any>{
-    return this._HttpClient.delete(`https://dummyjson.com/users/${id}`)
+    return this._HttpClient.delete(`users/${id}`)
   }
 }

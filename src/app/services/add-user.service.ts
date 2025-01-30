@@ -12,7 +12,7 @@ export class AddUserService {
   constructor(private _HttpClient:HttpClient) { }
 
   addNewUser(data:FormGroup):Observable<any>{
-    return this._HttpClient.post('https://dummyjson.com/users/add',data)
+    return this._HttpClient.post('users/add',data)
   }
 
 }

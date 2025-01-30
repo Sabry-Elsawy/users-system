@@ -12,7 +12,7 @@ export class AuthService {
 
 
   signin(data:FormGroup):Observable<any>{
-    return this._HttpClient.post('https://dummyjson.com/auth/login' , data)
+    return this._HttpClient.post('auth/login' , data)
   }
 
 }
