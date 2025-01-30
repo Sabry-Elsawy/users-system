@@ -25,7 +25,7 @@ export class SignInComponent {
     this.isLoading = true;
     this._AuthService.signin(data.value).subscribe({
       next: (response) => {
-        console.log(response);
+      //  console.log(response);
         localStorage.setItem('userToken', response.accessToken);
         localStorage.setItem(
           'userName',
@@ -35,7 +35,7 @@ export class SignInComponent {
         this.isLoading = false;
       },
       error: (err) => {
-        console.log(err.error.message);
+      //  console.log(err.error.message);
         this.errorMessage = err.error.message;
         this.isLoading = false;
       },

@@ -38,7 +38,7 @@ ngOnInit(): void {
   getUserById(){
     this._EditUserService.getUserById(this.userId).subscribe({
       next:(responce)=>{
-        console.log(responce);
+       // console.log(responce);
         this.userInfo=responce;
       },
       error:(err)=>{
@@ -67,7 +67,7 @@ ngOnInit(): void {
     if(this.userId){
       this._EditUserService.editOnUser(this.userId , data.value).subscribe({
         next:(responce)=>{
-          console.log(responce);
+        //  console.log(responce);
           
         },
         error:(err)=>{
@@ -89,7 +89,7 @@ ngOnInit(): void {
     {
       this._AddUserService.addNewUser(data.value).subscribe({
         next:(responce)=>{
-          console.log(responce);
+        //  console.log(responce);
           
         },
         error:(err)=>{

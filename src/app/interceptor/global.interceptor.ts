@@ -16,7 +16,7 @@ export class GlobalInterceptor implements HttpInterceptor {
     const baseUrl='https://dummyjson.com/';
     const token = localStorage.getItem('userToken')
  let newRequest =   request.clone({
-      url:baseUrl + request.url,
+      url: request.url.includes('assets')? request.url : baseUrl + request.url,
       setHeaders:{
         'Authorization':`Bearer ${token}`
       }

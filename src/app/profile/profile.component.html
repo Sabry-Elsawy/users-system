@@ -1,1 +1,76 @@
-<p>profile works!</p>
+<app-header></app-header>
+
+
+
+ 
+
+
+<div class="add-user">
+    <div class="head">
+        <h1> Profile</h1>
+        <hr>
+    </div>
+
+
+ <div class="form-container">
+ 
+    <form>
+        <div class="image">
+            <img [src]="currentUserInfo?.image" alt="">
+        </div>
+        <div class="row gy-2 mt-4">
+            <div  class="col-md-6  ">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input [value]="currentUserInfo?.firstName"  readonly  matInput placeholder=" your First Name">
+                  </mat-form-field>
+             
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input [value]="currentUserInfo?.lastName" readonly   matInput placeholder=" your Last Name">
+                  </mat-form-field>
+             
+            </div>
+
+            <div  class="col-md-6  ">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input [value]="currentUserInfo?.email"  type="email" readonly matInput placeholder="Enter your Email">
+                  </mat-form-field>
+               
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Age</mat-label>
+                    <input  [value]="currentUserInfo?.age"  matInput readonly placeholder="Enter your Age">
+                  </mat-form-field>
+               
+            </div>
+
+            <div  class="col-md-6  ">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <input   [value]="currentUserInfo?.phone" type="tel"   readonly matInput placeholder="Enter your Phone Number">
+                  </mat-form-field>
+                
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>birth Date</mat-label>
+                    <input   [value]="currentUserInfo?.birthDate" readonly   matInput placeholder="Enter your birth Date">
+                   
+                  
+                  </mat-form-field>
+                 
+            </div>
+         
+        </div>
+
+      
+    </form>
+ 
+ </div>
+
+</div>

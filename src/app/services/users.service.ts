@@ -12,6 +12,10 @@ export class UsersService {
     return this._HttpClient.get('users')
   }
   deleteUser(id:number):Observable<any>{
-    return this._HttpClient.delete(`users/${id}`)
+    return this._HttpClient.delete(`users/${id}`);
+  }
+
+  getCurrentUser():Observable<any>{
+    return this._HttpClient.get('user/me');
   }
 }

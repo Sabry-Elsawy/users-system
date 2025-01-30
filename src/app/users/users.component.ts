@@ -20,9 +20,9 @@ ngOnInit(): void {
 getAllUsers(){
   this._UsersService.getAllusers().subscribe({
     next:(response)=>{
-      console.log(response.users);
+    //  console.log(response.users);
       this.usersList=response.users;
-      console.log(this.usersList);
+   //   console.log(this.usersList);
       
     },
     error:(err)=>{
@@ -39,13 +39,13 @@ getAllUsers(){
 deleteUser(id:number){
   this._UsersService.deleteUser(id).subscribe({
     next:(responce)=>{
-      console.log(responce);
+     // console.log(responce);
     },
     error:(err)=>{
-      console.log(err);
+      //console.log(err);
     },
     complete:()=>{
-      console.log("ok");
+    //  console.log("ok");
       this.getAllUsers();
     }
   })
