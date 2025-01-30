@@ -21,7 +21,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { GlobalInterceptor } from './interceptor/global.interceptor';
 import { SearchPipe } from './search.pipe';
-   
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,8 +46,8 @@ import { SearchPipe } from './search.pipe';
     MatIconModule,
     HttpClientModule,
     MatDatepickerModule,
-    MatNativeDateModule
-   
+    MatNativeDateModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
     {

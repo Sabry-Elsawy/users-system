@@ -17,11 +17,18 @@
                     <input formControlName="username"   matInput placeholder="Enter your name">
                   </mat-form-field>
 
+                  <div class="errors" *ngIf="singinForm.get('username')?.errors && singinForm.get('username')?.touched">
+                    <p *ngIf="singinForm.get('username')?.errors?.['required']">Username is required</p>
+                  </div>
+
                   <mat-form-field class="w-100" appearance="outline">
                     <mat-label>Password</mat-label>
                     <input class="pass"   formControlName="password"  [type]="isShow? 'text':'password'" matInput placeholder="Enter your password">
                     <i (click)="isShow = !isShow" class="icon-eye fa-solid " [class]="isShow? 'fa-eye':' fa-eye-slash'"></i>
                   </mat-form-field>
+                  <div class="errors" *ngIf="singinForm.get('password')?.errors && singinForm.get('password')?.touched">
+                    <p *ngIf="singinForm.get('password')?.errors?.['required']">Password is required</p>
+                  </div>
                   <button   type="submit"> 
                     <span  *ngIf="!isLoading" >SIGN IN</span>
                     <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>

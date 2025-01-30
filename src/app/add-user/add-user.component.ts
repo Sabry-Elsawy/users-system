@@ -4,7 +4,7 @@ import { AddUserService } from '../services/add-user.service';
 import { ActivatedRoute } from '@angular/router';
 import { EditUserService } from '../services/edit-user.service';
 import { Users } from '../inerface/users';
-   
+import { ToastrService } from 'ngx-toastr';
  
 @Component({
   selector: 'app-add-user',
@@ -18,7 +18,7 @@ export class AddUserComponent implements OnInit {
  
   userInfo:Users|undefined;
  
-constructor(private _AddUserService:AddUserService , private _ActivatedRoute:ActivatedRoute , private _EditUserService:EditUserService){}
+constructor(private _AddUserService:AddUserService , private _ActivatedRoute:ActivatedRoute , private _EditUserService:EditUserService , private _ToastrService:ToastrService){}
 
 ngOnInit(): void {
  this.userId= this._ActivatedRoute.snapshot.params['id']
@@ -72,12 +72,14 @@ ngOnInit(): void {
         },
         error:(err)=>{
           console.log(err);
-          
+          this._ToastrService.error('user Updated' , 'Faild!')
         },
         complete:()=>{
           console.log('Done');
           this.userForm.reset();
-           
+          this._ToastrService.success('user Updated', 'Success!' , {
+            timeOut:2000
+          });
           this.userForm.controls['firstName'].setErrors(null);
           this.userForm.controls['lastName'].setErrors(null);
           this.userForm.controls['email'].setErrors(null);
@@ -94,12 +96,14 @@ ngOnInit(): void {
         },
         error:(err)=>{
           console.log(err);
-          
+          this._ToastrService.error('user add' , 'Faild!')
         },
         complete:()=>{
           console.log('Done');
           this.userForm.reset();
-           
+          this._ToastrService.success('user add', 'Success!' , {
+            timeOut:2000
+          });
           this.userForm.controls['firstName'].setErrors(null);
           this.userForm.controls['lastName'].setErrors(null);
           this.userForm.controls['email'].setErrors(null);

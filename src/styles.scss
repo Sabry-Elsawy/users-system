@@ -37,3 +37,26 @@ $users-system-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+.toast-success {
+  background-color: #FEAF00 !important; /* لون الخلفية */
+  color: white !important; /* لون النص */
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.toast-error {
+  background-color: #dc3545 !important;
+  color: white !important;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.toast-container {
+  margin: 20px;
+  z-index: 9999;
+}
+
