@@ -20,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { GlobalInterceptor } from './interceptor/global.interceptor';
+import { SearchPipe } from './search.pipe';
    
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { GlobalInterceptor } from './interceptor/global.interceptor';
     EditUserComponent,
     ProfileComponent,
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

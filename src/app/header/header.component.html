@@ -7,7 +7,7 @@
    
         <div class="search d-flex align-items-center">
        <div class="position-relative ">
-        <input  type="search" placeholder="Search..">
+        <input  [(ngModel)]="searchKey" (input)="onSearch(searchKey)" type="search" placeholder="Search..">
         <i class="fa-solid fa-magnifying-glass"></i>
        </div>
        
