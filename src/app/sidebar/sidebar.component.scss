@@ -1,10 +1,8 @@
  
 .sidebar{
     background-color: #F2EAE1;
-    height: 100vh;
- 
- 
-
+     height: 100vh;
+    overflow-y: auto;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,10 +83,11 @@ cursor: pointer;
 
 .sidebar button{
     text-align: center;
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    // position: absolute;
+    // bottom: 50px;
+    // left: 50%;
+    // transform: translateX(-50%);
+    margin-top: 90px;
     border: none;
     background-color: transparent;
 }
